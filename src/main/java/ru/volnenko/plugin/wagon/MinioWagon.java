@@ -2,7 +2,9 @@ package ru.volnenko.plugin.wagon;
 
 import io.minio.MinioClient;
 import io.minio.errors.ErrorResponseException;
+import lombok.Getter;
 import lombok.NonNull;
+import lombok.Setter;
 import lombok.SneakyThrows;
 import org.apache.maven.wagon.*;
 
@@ -15,6 +17,8 @@ import java.nio.file.*;
 
 public class MinioWagon extends BaseWagon {
 
+    @Getter
+    @Setter
     private MinioClient minioClient;
 
     @Override
