@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.volnenko.maven.plugin</groupId>
-    <artifactId>maven-minio-wagon</artifactId>
+    <artifactId>minio-wagon-maven-plugin</artifactId>
     <version>1.0.0</version>
 
-    <name>Maven Minio Wagon</name>
+    <name>Minio Wagon Maven Plugin</name>
     <description>Maven transport for Minio cloud storage</description>
     <url>https://github.com/denis-volnenko/maven-minio-wagon</url>
 

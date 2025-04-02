@@ -4,18 +4,20 @@
          name="Maven">
 
     <bannerLeft>
-        <name>MAVEN MINIO WAGON</name>
+        <name>MINIO WAGON MAVEN PLUGIN</name>
+        <src></src>
 <!--        <src>https://maven.apache.org/images/apache-maven-project.png</src>-->
-        <href>https://maven.volnenko.ru/sites/maven-minio-wagon</href>
+        <href>https://maven.volnenko.ru/sites/minio-wagon-maven-plugin/</href>
     </bannerLeft>
 
-<!--    <bannerRight>-->
+    <bannerRight>
+        <src></src>
 <!--        <src>https://maven.apache.org/images/maven-small.gif</src>-->
-<!--    </bannerRight>-->
+    </bannerRight>
 
     <body>
         <links>
-            <item name="MAVEN" href="https://maven.volnenko.ru" />
+            <item name="MAVEN" href="https://maven.volnenko.ru/" />
         </links>
 <!--        <menu name="DOC">-->
 <!--            <item name="archdoc" href="archdoc/archdoc.html" />-->
