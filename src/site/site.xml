@@ -14,9 +14,9 @@
 <!--    </bannerRight>-->
 
     <body>
-<!--        <links>-->
-<!--            <item name="archdoc" href="archdoc/archdoc.html" />-->
-<!--        </links>-->
+        <links>
+            <item name="MAVEN" href="https://maven.volnenko.ru" />
+        </links>
 <!--        <menu name="DOC">-->
 <!--            <item name="archdoc" href="archdoc/archdoc.html" />-->
 <!--        </menu>-->
