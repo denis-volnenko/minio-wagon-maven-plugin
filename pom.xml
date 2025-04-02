@@ -193,7 +193,7 @@
 <!--        <extensions>-->
 <!--            <extension>-->
 <!--                <groupId>ru.volnenko.maven.plugin</groupId>-->
-<!--                <artifactId>maven-minio-wagon</artifactId>-->
+<!--                <artifactId>minio-wagon-maven-plugin</artifactId>-->
 <!--                <version>1.0.0</version>-->
 <!--            </extension>-->
 <!--        </extensions>-->
