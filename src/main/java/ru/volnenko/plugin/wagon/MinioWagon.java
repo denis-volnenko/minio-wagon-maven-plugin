@@ -15,7 +15,7 @@ import java.net.URI;
 import java.net.URLConnection;
 import java.nio.file.*;
 
-public class MinioWagon extends BaseWagon {
+public final class MinioWagon extends BaseWagon {
 
     @Getter
     @Setter

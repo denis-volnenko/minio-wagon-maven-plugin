@@ -30,7 +30,7 @@
     </developers>
 
     <scm>
-        <url>https://github.com/denis-volnenko/maven-minio-wagon.git</url>
+        <url>https://github.com/denis-volnenko/minio-wagon-maven-plugin.git</url>
     </scm>
 
     <properties>
