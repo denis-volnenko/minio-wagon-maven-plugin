@@ -87,7 +87,7 @@
                 </repository>
                 <site>
                     <id>minio</id>
-                    <url>https://s3.volnenko.ru/maven.volnenko.ru/sites/${artifactId}</url>
+                    <url>https://s3.volnenko.ru/maven.volnenko.ru/sites/${project.artifactId}</url>
                 </site>
             </distributionManagement>
         </profile>
@@ -108,7 +108,7 @@
                 <site>
                     <id>m2.volnenko.ru</id>
                     <name>m2.volnenko.ru</name>
-                    <url>dav:https://m2.volnenko.ru/v1/webdav/sites/${artifactId}</url>
+                    <url>dav:https://m2.volnenko.ru/v1/webdav/sites/${project.artifactId}</url>
                 </site>
             </distributionManagement>
         </profile>
