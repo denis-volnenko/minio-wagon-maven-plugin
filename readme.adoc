@@ -51,3 +51,46 @@ https://github.com/denis-volnenko/minio-wagon-maven-plugin/
 https://maven.volnenko.ru/sites/minio-wagon-maven-plugin/
 
 |===
+
+== Plugin configuration
+
+=== Repository config
+
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<project ...>
+
+    <repositories>
+        <repository>
+            <id>maven.volnenko.ru</id>
+            <name>maven.volnenko.ru</name>
+            <url>https://maven.volnenko.ru/repository</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+</project>
+----
+
+=== Build maven plugin
+
+----
+mvn clean install
+----
+
+=== Deploy maven artifacts with plugin
+
+----
+mvn deploy
+----
+
+=== Deploy maven site with plugin
+
+----
+mvn site:deploy
+----
