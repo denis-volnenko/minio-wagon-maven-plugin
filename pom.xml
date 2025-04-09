@@ -68,40 +68,51 @@
     <profiles>
         <profile>
             <id>minio</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
-                <minio.host>${env.MINIO_HOST}</minio.host>
-                <minio.bucket.site>sites</minio.bucket.site>
-                <minio.bucket.repo>repository</minio.bucket.repo>
-                <minio.folder.site>minio-wagon-maven-plugin</minio.folder.site>
-                <minio.folder.repo />
+                <extension.wagon.groupId>ru.volnenko.maven.plugin</extension.wagon.groupId>
+                <extension.wagon.artifactId>minio-wagon-maven-plugin</extension.wagon.artifactId>
+                <extension.wagon.version>1.0.0</extension.wagon.version>
             </properties>
             <distributionManagement>
                 <snapshotRepository>
                     <id>minio</id>
-                    <url>http://${minio.host}/${minio.bucket.repo}/${minio.folder.repo}</url>
+                    <url>https://s3.volnenko.ru/maven.volnenko.ru/repository</url>
                 </snapshotRepository>
                 <repository>
                     <id>minio</id>
-                    <url>http://${minio.host}/${minio.bucket.repo}/${minio.folder.repo}</url>
+                    <url>https://s3.volnenko.ru/maven.volnenko.ru/repository</url>
                 </repository>
                 <site>
                     <id>minio</id>
-                    <url>http://${minio.host}/${minio.bucket.site}/${minio.folder.site}</url>
+                    <url>https://s3.volnenko.ru/maven.volnenko.ru/sites</url>
+                </site>
+            </distributionManagement>
+        </profile>
+        <profile>
+            <id>webdav</id>
+            <properties>
+                <extension.wagon.groupId>org.apache.maven.wagon</extension.wagon.groupId>
+                <extension.wagon.artifactId>wagon-webdav-jackrabbit</extension.wagon.artifactId>
+                <extension.wagon.version>3.5.2</extension.wagon.version>
+            </properties>
+            <distributionManagement>
+                <repository>
+                    <id>m2.volnenko.ru</id>
+                    <name>m2.volnenko.ru</name>
+                    <url>dav:https://m2.volnenko.ru/v1/webdav/repository</url>
+                    <uniqueVersion>true</uniqueVersion>
+                </repository>
+                <site>
+                    <id>m2.volnenko.ru</id>
+                    <name>m2.volnenko.ru</name>
+                    <url>dav:https://m2.volnenko.ru/v1/webdav/sites/${artifactId}</url>
                 </site>
             </distributionManagement>
         </profile>
     </profiles>
-
-<!--    <distributionManagement>-->
-<!--        <snapshotRepository>-->
-<!--            <id>central-nexus-oss-snapshots</id>-->
-<!--            <url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
-<!--        </snapshotRepository>-->
-<!--        <repository>-->
-<!--            <id>central-nexus-oss-releases</id>-->
-<!--            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>-->
-<!--        </repository>-->
-<!--    </distributionManagement>-->
 
     <build>
         <plugins>
@@ -163,44 +174,12 @@
                     </execution>
                 </executions>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-gpg-plugin</artifactId>-->
-<!--                <version>1.5</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>sign-artifacts</id>-->
-<!--                        <phase>verify</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>sign</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.sonatype.plugins</groupId>-->
-<!--                <artifactId>nexus-staging-maven-plugin</artifactId>-->
-<!--                <version>1.6.7</version>-->
-<!--                <extensions>true</extensions>-->
-<!--                <configuration>-->
-<!--                    <serverId>central-nexus-oss-releases</serverId>-->
-<!--                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>-->
-<!--                    <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
         </plugins>
         <extensions>
-<!--            <extension>-->
-<!--                <groupId>ru.volnenko.maven.plugin</groupId>-->
-<!--                <artifactId>minio-wagon-maven-plugin</artifactId>-->
-<!--                <version>1.0.0</version>-->
-<!--            </extension>-->
-<!--        </extensions>-->
-<!--        <extensions>-->
             <extension>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-webdav-jackrabbit</artifactId>
-                <version>3.5.2</version>
+                <groupId>${extension.wagon.groupId}</groupId>
+                <artifactId>${extension.wagon.artifactId}</artifactId>
+                <version>${extension.wagon.version}</version>
             </extension>
         </extensions>
     </build>
@@ -247,19 +226,5 @@
             </plugin>
         </plugins>
     </reporting>
-
-    <distributionManagement>
-        <repository>
-            <id>m2.volnenko.ru</id>
-            <name>m2.volnenko.ru</name>
-            <url>dav:https://m2.volnenko.ru/v1/webdav/repository</url>
-            <uniqueVersion>true</uniqueVersion>
-        </repository>
-        <site>
-            <id>m2.volnenko.ru</id>
-            <name>m2.volnenko.ru</name>
-            <url>dav:https://m2.volnenko.ru/v1/webdav/sites/${artifactId}</url>
-        </site>
-    </distributionManagement>
 
 </project>
