@@ -54,6 +54,25 @@ https://maven.volnenko.ru/sites/minio-wagon-maven-plugin/
 
 == Plugin configuration
 
+=== Example "settings.xml"
+
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+    ...
+    <servers>
+        ...
+        <server>
+            <id>minio-server</id>
+            <username></username>
+            <password></password>
+        </server>
+        ...
+    </servers>
+    ...
+</settings>
+----
+
 === Repository config
 
 ----
