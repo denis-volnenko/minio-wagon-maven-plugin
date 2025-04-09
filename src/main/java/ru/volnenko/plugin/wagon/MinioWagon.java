@@ -15,7 +15,7 @@ import java.net.URI;
 import java.net.URLConnection;
 import java.nio.file.*;
 
-public final class MinioWagon extends BaseWagon {
+public class MinioWagon extends BaseWagon {
 
     @Getter
     @Setter
@@ -63,7 +63,7 @@ public final class MinioWagon extends BaseWagon {
     protected void openConnectionInternal() {
         System.out.println("MINIO HOST NAME: " + getMinioHostname());
         System.out.println("MINIO BUCKET: " + getMinioBucket());
-        minioClient = getMinioClient();
+        minioClient = super.getMinioClient();
     }
 
     @Override

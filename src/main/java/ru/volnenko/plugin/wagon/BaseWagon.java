@@ -63,11 +63,11 @@ public abstract class BaseWagon extends StreamWagon {
     public String getMinioUsername() {
         String user = System.getenv("MINIO_USERNAME");
         if (user == null) {
-            user = System.getProperty("minio.user");
+            user = System.getProperty("minio.username");
             if (user == null) {
                 user = authenticationInfo.getUserName();
                 if (user == null) {
-                    user = "minio";
+                    user = "";
                 }
             }
         }
@@ -82,7 +82,7 @@ public abstract class BaseWagon extends StreamWagon {
             if (password == null) {
                 password = authenticationInfo.getPassword();
                 if (password == null) {
-                    password = "minio123";
+                    password = "";
                 }
             }
         }
