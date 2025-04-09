@@ -54,6 +54,38 @@ https://maven.volnenko.ru/sites/minio-wagon-maven-plugin/
 
 == Plugin configuration
 
+=== Environment Variables
+
+[cols="20,80"]
+|===
+
+|*Name*
+|*Description*
+
+|MINIO_USERNAME
+|Minio accessId
+
+|MINIO_PASSWORD
+|Minio secret
+
+|===
+
+=== System Variables
+
+[cols="20,80"]
+|===
+
+|*Name*
+|*Description*
+
+|minio.username
+|Minio accessId
+
+|minio.password
+|Minio secret
+
+|===
+
 === Repository config
 
 ----
