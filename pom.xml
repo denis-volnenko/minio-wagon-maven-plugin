@@ -72,7 +72,7 @@
                 <minio.host>${env.MINIO_HOST}</minio.host>
                 <minio.bucket.site>sites</minio.bucket.site>
                 <minio.bucket.repo>repository</minio.bucket.repo>
-                <minio.folder.site>maven-minio-wagon</minio.folder.site>
+                <minio.folder.site>minio-wagon-maven-plugin</minio.folder.site>
                 <minio.folder.repo />
             </properties>
             <distributionManagement>
@@ -118,7 +118,6 @@
                     <locales>ru</locales>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
