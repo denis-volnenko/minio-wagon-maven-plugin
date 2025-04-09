@@ -59,8 +59,9 @@ https://maven.volnenko.ru/sites/minio-wagon-maven-plugin/
 ----
 <?xml version="1.0" encoding="UTF-8"?>
 <project ...>
-
+    ...
     <repositories>
+        ...
         <repository>
             <id>maven.volnenko.ru</id>
             <name>maven.volnenko.ru</name>
@@ -72,8 +73,30 @@ https://maven.volnenko.ru/sites/minio-wagon-maven-plugin/
                 <enabled>true</enabled>
             </snapshots>
         </repository>
+        ...
     </repositories>
+    ...
+</project>
+----
 
+=== Config plugin
+
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<project ...>
+    ...
+    <build>
+        ...
+        <extensions>
+            <extension>
+                <groupId>ru.volnenko.maven.plugin</groupId>
+                <artifactId>minio-wagon-maven-plugin</artifactId>
+                <version>1.0.0</version>
+            </extension>
+        </extensions>
+        ...
+    </build>
+    ...
 </project>
 ----
 

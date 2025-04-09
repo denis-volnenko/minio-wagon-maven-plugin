@@ -189,14 +189,14 @@
 <!--                </configuration>-->
 <!--            </plugin>-->
         </plugins>
-<!--        <extensions>-->
+        <extensions>
 <!--            <extension>-->
 <!--                <groupId>ru.volnenko.maven.plugin</groupId>-->
 <!--                <artifactId>minio-wagon-maven-plugin</artifactId>-->
 <!--                <version>1.0.0</version>-->
 <!--            </extension>-->
 <!--        </extensions>-->
-        <extensions>
+<!--        <extensions>-->
             <extension>
                 <groupId>org.apache.maven.wagon</groupId>
                 <artifactId>wagon-webdav-jackrabbit</artifactId>
