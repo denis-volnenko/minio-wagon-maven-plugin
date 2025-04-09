@@ -54,25 +54,6 @@ https://maven.volnenko.ru/sites/minio-wagon-maven-plugin/
 
 == Plugin configuration
 
-=== Example "settings.xml"
-
-----
-<?xml version="1.0" encoding="UTF-8"?>
-<settings>
-    ...
-    <servers>
-        ...
-        <server>
-            <id>minio-server</id>
-            <username></username>
-            <password></password>
-        </server>
-        ...
-    </servers>
-    ...
-</settings>
-----
-
 === Repository config
 
 ----
@@ -98,7 +79,26 @@ https://maven.volnenko.ru/sites/minio-wagon-maven-plugin/
 </project>
 ----
 
-=== Config plugin
+=== Example "settings.xml"
+
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+    ...
+    <servers>
+        ...
+        <server>
+            <id>minio-server</id>
+            <username></username>
+            <password></password>
+        </server>
+        ...
+    </servers>
+    ...
+</settings>
+----
+
+=== Configuration plugin
 
 ----
 <?xml version="1.0" encoding="UTF-8"?>
@@ -119,6 +119,21 @@ https://maven.volnenko.ru/sites/minio-wagon-maven-plugin/
         </extensions>
         ...
     </build>
+    ...
+    <distributionManagement>
+        <snapshotRepository>
+            <id>minio</id>
+            <url>http://minio-server/bucketname/repo-folder-name</url>
+        </snapshotRepository>
+        <repository>
+            <id>minio</id>
+            <url>http://minio-server/bucketname/repo-folder-name</url>
+        </repository>
+        <site>
+            <id>minio</id>
+            <url>http://minio-server/bucketname/site-folder-name</url>
+        </site>
+    </distributionManagement>
     ...
 </project>
 ----
