@@ -79,15 +79,15 @@
             <distributionManagement>
                 <snapshotRepository>
                     <id>minio</id>
-                    <url>https://s3.volnenko.ru/minio.volnenko.ru/repository</url>
+                    <url>https://s3.volnenko.ru/maven.volnenko.ru/repository</url>
                 </snapshotRepository>
                 <repository>
                     <id>minio</id>
-                    <url>https://s3.volnenko.ru/minio.volnenko.ru/repository</url>
+                    <url>https://s3.volnenko.ru/maven.volnenko.ru/repository</url>
                 </repository>
                 <site>
                     <id>minio</id>
-                    <url>https://s3.volnenko.ru/minio.volnenko.ru/sites</url>
+                    <url>https://s3.volnenko.ru/maven.volnenko.ru/sites</url>
                 </site>
             </distributionManagement>
         </profile>
